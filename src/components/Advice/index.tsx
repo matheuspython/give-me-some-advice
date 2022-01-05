@@ -22,11 +22,10 @@ export const Advice: React.FC = () => {
     const response = await (await api.get('https://api.adviceslip.com/advice'))
     const data = response.data
     setAdviceItem(data)
-    // alert(data.slip.advice)
+    alert(data.slip.advice)
   }
   return (
     <Container >
-      <h1>{JSON.stringify(adviceItem.slip)}</h1>
       <button onClick={getAdvice}>send</button>
     </Container>
   )
